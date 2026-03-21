@@ -29,7 +29,7 @@ export default function Navbar({ theme, setTheme }) {
         }}>
           <span className="brand-icon">💻</span>
           <span className="brand-text">
-            <span className="brand-name">Portfolio</span>
+            {/* <span className="brand-name">Portfolio</span> */}
             <span className="brand-subtitle">Full Stack Dev</span>
           </span>
         </a>

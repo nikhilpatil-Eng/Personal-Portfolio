@@ -6,10 +6,11 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(135deg, #0a0d27 0%, #1a0f3d 25%, #2d1b4e 50%, #1a0f3d 75%, #0a0d27 100%);
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #0f0f0f 100%);
   color: #eaeaf2;
   line-height: 1.6;
   min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 main {
@@ -1081,3 +1082,461 @@ html { scroll-behavior: smooth; }
 ::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); }
 ::-webkit-scrollbar-thumb { background: linear-gradient(135deg,#667eea 0%, #764ba2 100%); border-radius:5px; }
 ::-webkit-scrollbar-thumb:hover { background: linear-gradient(135deg,#5568d3 0%, #6a3f8f 100%); }
+/* Theme Styles */
+
+/* Light Theme - Fresh */
+.app.light body {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 25%, #e9ecef 50%, #f8f9fa 75%, #ffffff 100%);
+  color: #212529;
+}
+
+.app.light p, .app.light span, .app.light div {
+  color: #212529;
+}
+
+/* Light Theme Text Contrast */
+.app.light .metric-card p,
+.app.light .expertise-card p,
+.app.light .project-card p,
+.app.light .metric-detail,
+.app.light .tech-list li,
+.app.light .achievement {
+  color: #495057;
+}
+
+.app.light .navbar {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.app.light .navbar-brand:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+.app.light .brand-name {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app.light .brand-subtitle {
+  color: rgba(45, 55, 72, 0.7);
+}
+
+.app.light .nav-link {
+  color: rgba(45, 55, 72, 0.8);
+}
+
+.app.light .nav-link::before {
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.app.light .nav-link:hover {
+  color: rgba(26, 32, 44, 1);
+}
+
+.app.light .nav-link.active {
+  background: linear-gradient(135deg, rgba(206, 176, 80, 0.15), rgba(118, 75, 162, 0.1));
+  color: rgba(26, 32, 44, 1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.app.light .nav-divider {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.app.light .btn-nav-cta {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+}
+
+.app.light .btn-nav-cta:hover {
+  box-shadow: 0 12px 30px rgba(102, 126, 234, 0.3);
+}
+
+.app.light .theme-toggle {
+  background: rgba(102, 126, 234, 0.05);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.app.light .theme-toggle:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: rgba(102, 126, 234, 0.2);
+}
+
+.app.light .hamburger-line {
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.app.light .hamburger:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+/* Dark Theme - Professional */
+.app.dark body {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #3a3a3a 50%, #2d2d2d 75%, #1a1a1a 100%);
+  color: #f8f9fa;
+}
+
+.app.dark p, .app.dark span, .app.dark div {
+  color: #f8f9fa;
+}
+
+/* Dark Theme Text Contrast */
+.app.dark .metric-card p,
+.app.dark .expertise-card p,
+.app.dark .project-card p,
+.app.dark .metric-detail,
+.app.dark .tech-list li,
+.app.dark .achievement {
+  color: #e9ecef;
+}
+
+/* Light Theme Footer & Additional Text Contrast */
+.app.light .site-footer {
+  color: rgba(45, 55, 72, 0.7);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.app.light .tech-stack {
+  color: rgba(45, 55, 72, 0.8);
+}
+
+.app.light .footer-bottom p {
+  color: rgba(74, 85, 104, 0.7);
+}
+
+.app.light .lighthouse-badge {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.08));
+  border: 1px solid rgba(102, 126, 234, 0.15);
+  color: rgba(102, 126, 234, 0.9);
+}
+
+.app.light .contact-card {
+  background: rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  color: rgba(45, 55, 72, 0.95);
+}
+
+.app.light .contact-card.muted {
+  background: transparent;
+  color: rgba(45, 55, 72, 0.75);
+}
+
+/* Light Theme Timeline & Architecture Contrast */
+.app.light .timeline-period {
+  color: rgba(102, 126, 234, 0.9);
+}
+
+.app.light .timeline-content h3 {
+  color: rgba(45, 55, 72, 0.98);
+}
+
+.app.light .timeline-company {
+  color: rgba(74, 85, 104, 0.8);
+}
+
+.app.light .architecture-features h3 {
+  color: rgba(45, 55, 72, 0.98);
+}
+
+.app.light .arch-arrow {
+  color: rgba(102, 126, 234, 0.7);
+}
+
+/* Light Theme CTA Contrast */
+.app.light .cta-subtitle {
+  color:  rgb(218 219 235);
+}
+
+/* Light Theme Architecture Features Contrast */
+.app.light .feature-content h4 {
+  color: rgba(45, 55, 72, 0.98);
+}
+
+.app.light .feature-content p {
+  color: rgba(74, 85, 104, 0.75);
+}
+
+/* Light Theme Architecture Box Text Contrast */
+.app.light .arch-box p {
+  color: rgba(45, 55, 72, 0.9);
+}
+
+/* Light Theme Expertise Header Contrast */
+.app.light .expertise-header h3 {
+  color: rgba(45, 55, 72, 0.98);
+}
+
+/* Dark Theme Footer & Additional Text Contrast */
+.app.dark .site-footer {
+  color: rgba(230, 230, 245, 0.65);
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.app.dark .tech-stack {
+  color: rgba(220, 210, 255, 0.8);
+}
+
+.app.dark .footer-bottom p {
+  color: rgba(200, 190, 255, 0.7);
+}
+
+.app.dark .lighthouse-badge {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.18), rgba(118, 75, 162, 0.12));
+  border: 1px solid rgba(102, 126, 234, 0.25);
+  color: rgba(102, 126, 234, 1);
+}
+
+.app.dark .contact-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: rgba(230, 230, 245, 0.95);
+}
+
+.app.dark .contact-card.muted {
+  background: transparent;
+  color: rgba(230, 230, 245, 0.75);
+}
+
+/* Dark Theme Timeline & Architecture Contrast */
+.app.dark .timeline-period {
+  color: rgba(102, 126, 234, 0.95);
+}
+
+.app.dark .timeline-content h3 {
+  color: rgba(235, 235, 250, 0.98);
+}
+
+.app.dark .timeline-company {
+  color: rgba(200, 190, 255, 0.8);
+}
+
+.app.dark .architecture-features h3 {
+  color: rgba(235, 235, 250, 0.98);
+}
+
+.app.dark .arch-arrow {
+  color: rgba(102, 126, 234, 0.6);
+}
+
+/* Dark Theme CTA Contrast */
+.app.dark .cta-subtitle {
+  color: rgba(235, 235, 250, 0.85);
+}
+
+/* Dark Theme Architecture Features Contrast */
+.app.dark .feature-content h4 {
+  color: rgba(235, 235, 250, 0.98);
+}
+
+.app.dark .feature-content p {
+  color: rgba(220, 210, 255, 0.75);
+}
+
+/* Dark Theme Architecture Box Text Contrast */
+.app.dark .arch-box p {
+  color: rgba(235, 235, 250, 0.9);
+}
+
+/* Dark Theme Expertise Header Contrast */
+.app.dark .expertise-header h3 {
+  color: rgba(235, 235, 250, 0.98);
+}
+
+.app.dark .navbar {
+  background: rgba(26, 26, 26, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.app.dark .navbar-brand:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .brand-name {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app.dark .brand-subtitle {
+  color: rgba(248, 249, 250, 0.7);
+}
+
+.app.dark .nav-link {
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.app.dark .nav-link::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .nav-link:hover {
+  color: rgba(248, 249, 250, 1);
+}
+
+.app.dark .nav-link.active {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  color: rgba(248, 249, 250, 1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app.dark .nav-divider {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.app.dark .btn-nav-cta {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .btn-nav-cta:hover {
+  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+}
+
+.app.dark .theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app.dark .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.app.dark .hamburger-line {
+  background: linear-gradient(90deg, #f8f9fa, #e9ecef);
+}
+
+.app.dark .hamburger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme Hero Overrides */
+.app.light .hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.8));
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.app.light .hero::before {
+  background: radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1), transparent 40%);
+}
+
+.app.light .hero::after {
+  background: radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.08), transparent 40%);
+}
+
+.app.light .hero h1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 45%, #f093fb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app.light .hero-sub {
+  color: rgba(45, 55, 72, 0.9);
+}
+
+.app.light .hero-desc {
+  color: rgba(45, 55, 72, 0.8);
+}
+
+.app.light .btn-ghost {
+  border: 2px solid rgba(102, 126, 234, 0.2);
+  color: rgba(45, 55, 72, 0.9);
+}
+
+.app.light .btn-ghost:hover {
+  background: rgba(102, 126, 234, 0.05);
+}
+
+/* Dark Theme Hero Overrides */
+.app.dark .hero-card {
+  background: linear-gradient(180deg, rgba(42, 42, 42, 0.95), rgba(58, 58, 58, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .hero::before {
+  background: radial-gradient(circle at 20% 20%, rgba(248, 249, 250, 0.1), transparent 40%);
+}
+
+.app.dark .hero::after {
+  background: radial-gradient(circle at 80% 80%, rgba(233, 236, 239, 0.08), transparent 40%);
+}
+
+.app.dark .hero h1 {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 45%, #dee2e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app.dark .hero-sub {
+  color: rgba(248, 249, 250, 0.9);
+}
+
+.app.dark .hero-desc {
+  color: rgba(248, 249, 250, 0.8);
+}
+
+.app.dark .btn-ghost {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(248, 249, 250, 0.9);
+}
+
+.app.dark .btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Light Theme Section Overrides */
+.app.light .section-title {
+  color: #2d3748;
+}
+
+.app.light .section-sub {
+  color: rgba(45, 55, 72, 0.7);
+}
+
+.app.light .metric-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.app.light .expertise-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.app.light .project-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(102, 126, 234, 0.1);
+  color: #212529;
+}
+
+/* Dark Theme Section Overrides */
+.app.dark .section-title {
+  color: #f8f9fa;
+}
+
+.app.dark .section-sub {
+  color: rgba(248, 249, 250, 0.7);
+}
+
+.app.dark .metric-card {
+  background: rgba(42, 42, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .expertise-card {
+  background: rgba(42, 42, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app.dark .project-card {
+  background: rgba(42, 42, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

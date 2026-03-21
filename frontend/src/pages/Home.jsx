@@ -8,7 +8,7 @@ export default function Home() {
             <div className="hero-image-section">
               <div className="hero-image-container">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" 
+                  src="" 
                   alt="Profile" 
                   className="hero-profile-image"
                 />
