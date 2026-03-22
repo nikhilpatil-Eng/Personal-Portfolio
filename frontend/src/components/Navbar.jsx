@@ -12,11 +12,11 @@ export default function Navbar({ theme, setTheme }) {
   };
 
   const navLinks = [
-    { id: 'home', label: 'Home', icon: '🏠' },
-    { id: 'expertise', label: 'Skills', icon: '🔧' },
-    { id: 'projects', label: 'Projects', icon: '💼' },
-    { id: 'experience', label: 'Experience', icon: '📅' },
-    { id: 'contact', label: 'Contact', icon: '📧' },
+    { id: 'home', label: 'Home' },
+    { id: 'expertise', label: 'Skills' },
+    { id: 'projects', label: 'Projects' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'contact', label: 'Contact' },
   ];
 
   return (
@@ -58,7 +58,6 @@ export default function Navbar({ theme, setTheme }) {
                   scrollToSection(link.id);
                 }}
               >
-                <span className="nav-icon">{link.icon}</span>
                 <span className="nav-label">{link.label}</span>
               </a>
             ))}

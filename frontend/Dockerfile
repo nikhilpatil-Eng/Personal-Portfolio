@@ -10,7 +10,7 @@ COPY package*.json ./
 # Install dependencies (including dev dependencies for build)
 RUN npm ci
 
-# Copy source code
+# Copy source codeFProven track record of building production-grade systems
 COPY . .
 
 # Build the application
