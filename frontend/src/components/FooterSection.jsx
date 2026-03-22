@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ContactForm from './ContactForm';
 
 export default function FooterSection() {
+  const [showContactForm, setShowContactForm] = useState(false);
+
   return (
     <footer className="site-footer" id="contact">
       <div className="footer-content">
+        {/* Contact Form Modal */}
+        {showContactForm && (
+          <div className="contact-modal">
+            <div className="contact-modal-overlay" onClick={() => setShowContactForm(false)}></div>
+            <div className="contact-modal-content">
+              <button 
+                className="modal-close" 
+                onClick={() => setShowContactForm(false)}
+                aria-label="Close contact form"
+              >
+                ✕
+              </button>
+              <ContactForm />
+            </div>
+          </div>
+        )}
+
         <div className="footer-grid">
           <div className="footer-section">
             <h4>💼 Quick Links</h4>
@@ -27,9 +47,16 @@ export default function FooterSection() {
           <div className="footer-section">
             <h4>📞 Get In Touch</h4>
             <ul className="footer-links">
-              <li><a href="mailto:nikhilpatil.ofc@gmail.com">📧 Email</a></li>
-              <li><a href="tel:+919168584839">📱 +91 9168584839</a></li>
-              <li><a href="#contact">💬 Contact Form</a></li>
+              <li>
+                <button 
+                  className="contact-form-trigger"
+                  onClick={() => setShowContactForm(true)}
+                >
+                  📧 Contact Form
+                </button>
+              </li>
+              <li><a href="mailto:contact@nikhilpatil.dev">� Professional Email</a></li>
+              <li><a href="https://calendly.com/nikhilpatil" target="_blank" rel="noopener noreferrer">📅 Schedule Call</a></li>
             </ul>
           </div>
 
@@ -37,12 +64,15 @@ export default function FooterSection() {
             <h4>📍 Location</h4>
             <p className="location-text">Pune, Maharashtra, India</p>
             <p className="availability">🟢 Available for Full-Time Roles</p>
+            <div className="remote-work">
+              <p>🌐 Open to Remote Opportunities</p>
+            </div>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p>&copy; 2026 Nikhil Patil. All Rights Reserved. Built with ⚛️ React & 🟢 Node.js</p>
-          <p className="tech-stack">Deployed with Docker & AWS </p>
+          <p className="tech-stack">Deployed with Docker & AWS | Secured with Best Practices</p>
         </div>
       </div>
     </footer>
